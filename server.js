@@ -1,7 +1,8 @@
 var express = require('express');
 var middleware = require('./middleware.js');
 var app = express();
-var PORT = 3000;				// when variable is all uppercase that means this variable should be constant
+// var PORT = 3000;				// when variable is all uppercase that means this variable should be constant
+var PORT = process.env.PORT || 3000;   // process.env.PORT is set up to run server on heroku
 
 // app.get('/', function(req, res) {				//takes two arguments, url path and anonymous function
 // 																				//anonymous function take two arguments, req - request: holds info sending from the user, res - response: sends info back to user
